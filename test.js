@@ -1,9 +1,4 @@
-# edit-object
-
-### example
-
-```
-var editObj = require('edit-object')
+var editObj = require('./')
 
 var targetobject = {
   a: 'one',
@@ -17,8 +12,4 @@ var editobject = {
 }
 
 editObj(targetobject, editobject)
-
 console.log(targetobject)
-
-// { a: 'one', c: { test: 'hey', skip: 'yes', addme: 'wow' } }
-```

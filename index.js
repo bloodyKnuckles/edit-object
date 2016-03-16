@@ -1,4 +1,4 @@
-function updateObj (targetObject, obj) {
+module.exports = function editObj (targetObject, obj) {
   Object.keys(obj).forEach(function (key) {
     if ( undefined === obj[key] || null === obj[key] ) {
       delete targetObject[key]
@@ -11,7 +11,7 @@ function updateObj (targetObject, obj) {
       ) {
         targetObject[key] = {}
       }
-      update(targetObject[key], obj[key])
+      editObj(targetObject[key], obj[key])
     }
     else {
       targetObject[key] = obj[key]
